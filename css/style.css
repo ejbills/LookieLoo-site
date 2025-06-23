@@ -1,0 +1,422 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #f0f0f0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    backdrop-filter: blur(10px);
+    background: rgba(26, 26, 26, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #f0f0f0;
+    background: linear-gradient(45deg, #007aff, #5ac8fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #007aff;
+    transform: translateY(-1px);
+}
+
+.button {
+    background: linear-gradient(45deg, #007aff, #5ac8fa);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 122, 255, 0.4);
+    color: white;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: radial-gradient(ellipse at center, rgba(0, 122, 255, 0.1) 0%, transparent 70%);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #f0f0f0, #007aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #007aff;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+    color: #b0b0b0;
+    line-height: 1.8;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(45deg, #007aff, #5ac8fa);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0, 122, 255, 0.3);
+    margin-bottom: 1.5rem;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 122, 255, 0.4);
+}
+
+.button-price {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.beta-note {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.features {
+    padding: 4rem 2rem;
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.features-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f0f0f0;
+}
+
+.features-header p {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    background: linear-gradient(135deg, #2b2b2b 0%, #3a3a3a 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid #404040;
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    border-color: #007aff;
+    box-shadow: 0 20px 40px rgba(0, 122, 255, 0.1);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.8rem;
+    margin: 0 0 1.5rem 0;
+    color: #007aff;
+    font-weight: 700;
+}
+
+.feature-highlight {
+    font-size: 1.1rem;
+    color: #5ac8fa;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    background: rgba(90, 200, 250, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.feature ul {
+    padding-left: 20px;
+    color: #d0d0d0;
+}
+
+.feature ul ul {
+    padding-left: 20px;
+    margin-top: 0.5rem;
+}
+
+.feature li {
+    margin-bottom: 0.8rem;
+}
+
+.pricing {
+    padding: 4rem 2rem;
+}
+
+.pricing-content {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.pricing-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+}
+
+.pricing-card {
+    background: linear-gradient(135deg, #2b2b2b 0%, #3a3a3a 100%);
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    border: 2px solid #007aff;
+    box-shadow: 0 20px 40px rgba(0, 122, 255, 0.2);
+}
+
+.price {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #007aff;
+    margin-bottom: 0.5rem;
+}
+
+.price-description {
+    color: #b0b0b0;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.pricing-features li {
+    padding: 0.5rem 0;
+    color: #d0d0d0;
+    font-size: 1.1rem;
+}
+
+.pricing-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #007aff, #5ac8fa);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0, 122, 255, 0.3);
+    margin-top: 1rem;
+}
+
+.pricing-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 122, 255, 0.4);
+}
+
+.discord-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.discord-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f0f0f0;
+}
+
+.discord-content p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    margin-bottom: 2rem;
+}
+
+.discord-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: #5865F2; /* Discord brand color */
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(88, 101, 242, 0.3);
+}
+
+.discord-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(88, 101, 242, 0.4);
+}
+
+.discord-icon {
+    font-size: 1.5rem;
+}
+
+.discord-code {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #888;
+}
+
+.discord-code code {
+    background: #404040;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-family: "SF Mono", "Menlo", "Consolas", monospace;
+}
+
+.feedback {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.feedback-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.feedback-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #f0f0f0;
+}
+
+.feedback-content p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 1px solid #333;
+    background: #1a1a1a;
+}
+
+.footer-content p {
+    color: #888;
+    margin: 0.5rem 0;
+}
+
+.footer-content a {
+    color: #007aff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: #5ac8fa;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    nav ul li {
+        margin-left: 0;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero {
+        padding: 3rem 1rem;
+    }
+} 
