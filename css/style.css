@@ -11,6 +11,9 @@
   --apple-gray-light: #f2f2f7;
   --apple-white: #ffffff;
   --apple-background: #fbfbfd;
+  --lookieloo-light: #b64ebf;
+  --lookieloo-medium: #8a00a3;
+  --lookieloo-dark: #4c0072;
 }
 
 * {
@@ -51,13 +54,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 44px;
+  height: 66px;
 }
 
 .logo {
-  font-size: 21px;
-  font-weight: 600;
-  color: var(--apple-gray-1);
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--lookieloo-medium);
   text-decoration: none;
   letter-spacing: -0.022em;
 }
@@ -69,32 +72,34 @@ nav {
   align-items: center;
 }
 
-.nav-links a {
+.nav-link {
   color: var(--apple-gray-1);
   text-decoration: none;
   font-size: 17px;
-  font-weight: 400;
   letter-spacing: -0.022em;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: var(--apple-blue);
+.nav-link:hover {
+  color: var(--lookieloo-light);
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .nav-cta {
-  background: var(--apple-blue);
+  background: var(--lookieloo-medium);
   color: var(--apple-white);
-  padding: 8px 16px;
-  border-radius: 980px;
-  font-weight: 400;
+  text-decoration: none;
+  padding: 11px 22px;
+  border-radius: 22px;
   transition: all 0.3s ease;
 }
 
 .nav-cta:hover {
-  background: var(--apple-blue-dark);
-  color: var(--apple-white);
-  transform: none;
+  background: var(--lookieloo-dark);
 }
 
 /* Main content */
