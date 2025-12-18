@@ -8,7 +8,7 @@
   --apple-gray-4: #8e8e93;
   --apple-gray-5: #aeaeb2;
   --apple-gray-6: #c7c7cc;
-  --apple-gray-light: #f2f2f7;
+  --apple-gray-light: #e2e2e2;
   --apple-white: #ffffff;
   --apple-background: #fbfbfd;
   --lookieloo-light: #b64ebf;
@@ -44,7 +44,7 @@ body {
   z-index: 1000;
   background: rgba(251, 251, 253, 0.8);
   backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid var(--apple-gray-6);
+  border-bottom: 1px solid var(--apple-gray-light);
 }
 
 nav {
@@ -85,6 +85,7 @@ nav {
 }
 
 .active {
+  color: var(--lookieloo-light);
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -444,32 +445,31 @@ main {
 /* Footer */
 footer {
   background: var(--apple-white);
-  border-top: 1px solid var(--apple-gray-6);
-  padding: 40px 0;
+  border-top: 1px solid var(--apple-gray-light);
+  padding-block: 1rem;
 }
 
 .footer-content {
+  display: flex;
   max-width: 1024px;
-  margin: 0 auto;
-  padding: 0 22px;
-  text-align: center;
+  margin-inline: auto;
+  justify-content: space-around;
 }
 
 .footer-content p {
   font-size: 15px;
   color: var(--apple-gray-4);
-  line-height: 1.47;
-  letter-spacing: -0.024em;
 }
 
 .footer-content a {
-  color: var(--apple-blue);
+  color: var(--lookieloo-medium);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-content a:hover {
-  color: var(--apple-blue-dark);
+  color: var(--lookieloo-light);
+  text-decoration: underline;
 }
 
 /* Contact page styles */
