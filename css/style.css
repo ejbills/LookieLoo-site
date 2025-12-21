@@ -14,6 +14,8 @@
   --lookieloo-light: #b64ebf;
   --lookieloo-medium: #8a00a3;
   --lookieloo-dark: #4c0072;
+
+  --button-radius: 22px;
 }
 
 * {
@@ -95,7 +97,7 @@ nav {
   color: var(--apple-white);
   text-decoration: none;
   padding: 11px 22px;
-  border-radius: 22px;
+  border-radius: var(--button-radius);
   transition: all 0.3s ease;
 }
 
@@ -113,47 +115,39 @@ main {
 /* Hero section */
 .hero {
   text-align: center;
-  padding: 60px 0 120px;
+  padding: 50px 0 100px;
   background: var(--apple-background);
 }
 
-.app-icon {
-  margin-bottom: 32px;
-}
-
 .app-icon img {
-  width: 160px;
-  height: 160px;
-  display: block;
-  margin: 0 auto;
+  size: 160px;
 }
 
 .hero h1 {
   font-size: 56px;
-  font-weight: 600;
-  line-height: 1.07;
-  letter-spacing: -0.005em;
   color: var(--apple-gray-1);
-  margin-bottom: 6px;
 }
 
 .subtitle {
   font-size: 28px;
-  font-weight: 400;
-  line-height: 1.14;
-  letter-spacing: 0.007em;
   color: var(--apple-gray-3);
-  margin-bottom: 20px;
 }
 
 .hero-description {
   font-size: 21px;
-  font-weight: 400;
   line-height: 1.38;
-  letter-spacing: 0.011em;
   color: var(--apple-gray-3);
   max-width: 640px;
-  margin: 0 auto 40px;
+  margin: 28px auto;
+  text-wrap: balance;
+}
+
+.hero-note {
+  font-size: 18px;
+  color: var(--apple-gray-3);
+  border: 1px solid var(--apple-gray-6);
+  padding: 8px 16px;
+  border-radius: 12px;
 }
 
 .video-demos {
@@ -195,28 +189,22 @@ main {
 
 .cta-button {
   display: inline-flex;
-  align-items: center;
-  background: var(--apple-blue);
+  background: var(--lookieloo-medium);
   color: var(--apple-white);
   padding: 12px 24px;
-  border-radius: 980px;
+  border-radius: var(--button-radius);
   text-decoration: none;
-  font-size: 17px;
-  font-weight: 400;
-  letter-spacing: -0.022em;
+  margin-block: 24px;
   transition: all 0.3s ease;
-  margin: 24px 0;
 }
 
 .cta-button:hover {
-  background: var(--apple-blue-dark);
+  background: var(--lookieloo-dark);
   transform: none;
 }
 
 .download-note {
-  font-size: 17px;
-  color: var(--apple-gray-4);
-  margin-top: 12px;
+  color: var(--apple-gray-3);
 }
 
 /* Features section */
@@ -287,7 +275,7 @@ main {
   font-weight: 400;
   line-height: 1.42;
   letter-spacing: 0.012em;
-  color: var(--apple-blue);
+  color: var(--lookieloo-medium);
   margin-bottom: 24px;
 }
 
@@ -348,6 +336,9 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  border: 1px solid var(--apple-gray-6);
+  border-radius: 18px;
+  padding: 24px;
 }
 
 .benefit-icon {
@@ -399,7 +390,6 @@ main {
   border-radius: 980px;
   text-decoration: none;
   font-size: 17px;
-  font-weight: 400;
   letter-spacing: -0.022em;
   transition: all 0.3s ease;
 }
@@ -424,16 +414,14 @@ main {
   margin-bottom: 16px;
 }
 
-.download-content p {
+.download-text {
   font-size: 21px;
-  font-weight: 400;
   line-height: 1.38;
-  letter-spacing: 0.011em;
   color: var(--apple-gray-3);
   margin-bottom: 32px;
   max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
+  text-wrap: balance;
 }
 
 .cta-button.large {
@@ -530,6 +518,7 @@ footer {
 
 .contact-email a:hover {
   color: var(--lookieloo-dark);
+  text-decoration: underline;
 }
 
 .contact-note {
@@ -539,7 +528,7 @@ footer {
 
 /* Privacy page styles */
 .privacy-page {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 
 .privacy-content {
@@ -617,13 +606,14 @@ footer {
 }
 
 .privacy-section a {
-  color: var(--apple-blue);
+  color: var(--lookieloo-medium);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .privacy-section a:hover {
-  color: var(--apple-blue-dark);
+  color: var(--lookieloo-dark);
+  text-decoration: underline;
 }
 
 .privacy-last-updated {
@@ -642,18 +632,13 @@ footer {
 
 .pricing-content h2 {
   font-size: 48px;
-  font-weight: 600;
   line-height: 1.08;
-  letter-spacing: -0.003em;
   color: var(--apple-gray-1);
   margin-bottom: 16px;
 }
 
 .pricing-subtitle {
   font-size: 21px;
-  font-weight: 400;
-  line-height: 1.38;
-  letter-spacing: 0.011em;
   color: var(--apple-gray-3);
   margin-bottom: 48px;
 }
@@ -664,7 +649,6 @@ footer {
   gap: 32px;
   max-width: 800px;
   margin: 0 auto 48px;
-  align-items: stretch;
 }
 
 .pricing-card {
@@ -672,11 +656,9 @@ footer {
   border-radius: 18px;
   padding: 40px 32px;
   border: 1px solid var(--apple-gray-6);
-  position: relative;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .pricing-card:hover {
@@ -685,7 +667,7 @@ footer {
 }
 
 .pricing-card.premium {
-  border: 2px solid var(--apple-blue);
+  border: 2px solid var(--lookieloo-light);
   transform: scale(1.05);
 }
 
@@ -698,45 +680,34 @@ footer {
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--apple-blue);
+  background: var(--lookieloo-light);
   color: var(--apple-white);
   padding: 6px 16px;
   border-radius: 980px;
   font-size: 14px;
-  font-weight: 500;
-  letter-spacing: -0.008em;
+  font-weight: bold;
 }
 
 .pricing-card h3 {
   font-size: 24px;
-  font-weight: 600;
-  line-height: 1.17;
-  letter-spacing: 0.009em;
   color: var(--apple-gray-1);
-  margin-bottom: 8px;
 }
 
 .price {
   font-size: 48px;
   font-weight: 600;
   line-height: 1.08;
-  letter-spacing: -0.003em;
   color: var(--apple-gray-1);
-  margin-bottom: 8px;
+  margin-block: 10px;
 }
 
 .price-description {
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 1.47;
-  letter-spacing: -0.022em;
   color: var(--apple-gray-3);
   margin-bottom: 32px;
 }
 
 .pricing-features {
   list-style: none;
-  padding: 0;
   margin-bottom: 32px;
   text-align: left;
   flex-grow: 1;
@@ -744,48 +715,41 @@ footer {
 
 .pricing-features li {
   font-size: 17px;
-  font-weight: 400;
-  line-height: 1.47;
-  letter-spacing: -0.022em;
   color: var(--apple-gray-3);
-  margin-bottom: 12px;
-  padding-left: 0;
+  margin-bottom: 10px;
 }
 
 .pricing-button {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
-  width: 100%;
   padding: 12px 24px;
-  border-radius: 980px;
+  border-radius: 44px;
   text-decoration: none;
   font-size: 17px;
-  font-weight: 400;
-  letter-spacing: -0.022em;
+  font-weight: bold;
   transition: all 0.3s ease;
   border: 2px solid;
 }
 
 .pricing-button.primary {
-  background: var(--apple-blue);
+  background: var(--lookieloo-light);
   color: var(--apple-white);
-  border-color: var(--apple-blue);
+  border-color: var(--lookieloo-light);
 }
 
 .pricing-button.primary:hover {
-  background: var(--apple-blue-dark);
-  border-color: var(--apple-blue-dark);
+  background: var(--lookieloo-medium);
+  border-color: var(--lookieloo-medium);
 }
 
 .pricing-button.secondary {
   background: transparent;
-  color: var(--apple-blue);
-  border-color: var(--apple-blue);
+  color: var(--lookieloo-light);
+  border-color: var(--lookieloo-light);
 }
 
 .pricing-button.secondary:hover {
-  background: var(--apple-blue);
+  background: var(--lookieloo-medium);
   color: var(--apple-white);
 }
 
@@ -817,7 +781,6 @@ footer {
 
   .hero h1 {
     font-size: 40px;
-    line-height: 1.1;
   }
 
   .subtitle {
@@ -865,7 +828,6 @@ footer {
 
   .pricing-cards {
     grid-template-columns: 1fr;
-    gap: 24px;
   }
 
   .pricing-card.premium {
@@ -902,11 +864,9 @@ footer {
   }
 
   .footer-content {
-    padding: 0 16px;
-  }
-
-  .hero {
-    padding: 40px 0 80px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 
   .hero h1 {
@@ -919,6 +879,11 @@ footer {
 
   .hero-description {
     font-size: 17px;
+  }
+
+  .hero-note {
+    font-size: 16px;
+    display: block;
   }
 
   .features-header h2,
